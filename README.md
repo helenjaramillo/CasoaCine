@@ -1,5 +1,4 @@
-🎬 CineCali Premium Experience | Sistema Inteligente de Gestión Cinematográfica
-
+                        🎬 CineCali Premium 
 Sistema web para la gestión de taquilla, control de funciones, recaudación de ingresos, seguimiento estadístico y administración operativa de un cine.
 
 📌 Descripción del Proyecto
