@@ -1,91 +1,38 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineCali Premium</title>
 
-<title>CineCali Premium</title>
-
-<link rel="stylesheet" href="css/style.css">
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
+    css/style.css
 </head>
+
 <body>
 
-<header class="hero">
-    <div class="overlay">
-        <h1>🎬 CineCali Premium</h1>
-        <p>Gestión Inteligente de Taquilla</p>
-    </div>
-</header>
+<h1>CineCali Premium</h1>
 
-<div id="login" class="card">
+<div id="login">
 
-    <h2>🔐 Iniciar Sesión</h2>
+    <h2>Iniciar Sesión</h2>
 
-    <input
-        type="text"
-        id="usuario"
-        placeholder="Usuario">
+    <input type="text" id="usuario" placeholder="Usuario">
+    <br><br>
 
-    <input
-        type="password"
-        id="clave"
-        placeholder="Contraseña">
+    <input type="password" id="clave" placeholder="Contraseña">
+    <br><br>
 
-    <button onclick="ingresar()">
-        Ingresar
-    </button>
+    <button onclick="ingresar()">Ingresar</button>
 
 </div>
 
-<div id="panel" class="card" style="display:none;">
+<div id="panel" style="display:none">
 
-    <h2>🍿 Registro de Venta</h2>
-
-    <input type="text" id="pelicula" placeholder="Película">
-
-    <input type="text" id="sala" placeholder="Sala">
-
-    <input type="number" id="boletas" placeholder="Cantidad de Boletas">
-
-    <input type="number" id="precio" placeholder="Precio por Boleta">
-
-    <button onclick="registrarVenta()">
-        Registrar Venta
-    </button>
-
-    <button onclick="cambiarAsiento()">
-        Cambio de Asiento
-    </button>
-
-    <h3 id="resultado"></h3>
-
-    <h2>📋 Historial de Ventas</h2>
-
-    <table>
-        <thead>
-            <tr>
-                <th>Película</th>
-                <th>Sala</th>
-                <th>Boletas</th>
-                <th>Total</th>
-            </tr>
-        </thead>
-
-        <tbody id="contenidoTabla"></tbody>
-    </table>
-
-    <h2>📈 Recaudación</h2>
-
-    <canvas id="grafica"></canvas>
+    <h2>Bienvenido al sistema</h2>
 
 </div>
 
-<script src="js/auth.js"></script>
-<script src="js/registro.js"></script>
-<script src="js/grafica.js"></script>
+js/auth.jsscript>
 
 </body>
 </html>
