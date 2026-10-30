@@ -152,8 +152,8 @@ CasoaCine
 
 👩‍💻 Autora
 Helen Yessenia Jaramillo Caicedo
-Proyecto Académico - Desarrollo Web
 
-🎬 CineCali Premium Experience © 2026
+
+                                                                            🎬 CineCali Premium Experience © 2026
 
 
