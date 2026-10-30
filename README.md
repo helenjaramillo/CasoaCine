@@ -135,5 +135,3 @@ Este desarrollo corresponde al Caso de Estudio: Sistema de Cine Básico con Grá
 👩‍💻 Autora
 Helen Yessenia Jaramillo Caicedo
 
-Proyecto Académico de Desarrollo Web
-🎬 CineCali Premium ExperienceSistema Inteligente de Gestión Cinematográfica
