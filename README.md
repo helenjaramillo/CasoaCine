@@ -1,159 +1,140 @@
-                                                    🎬 CineCali Premium Experience
+🎬 CineCali Premium Experience | Sistema Inteligente de Gestión Cinematográfica
 
-🎥 Descripción General
-CineCali Premium Experience es una aplicación web interactiva diseñada para la administración inteligente de taquilla, ventas y control operativo de un cine.
+Sistema web para la gestión de taquilla, control de funciones, recaudación de ingresos, seguimiento estadístico y administración operativa de un cine.
 
-La plataforma permite autenticar usuarios, registrar funciones cinematográficas, calcular ingresos por ventas, aplicar recargos por cambios de asiento, capturar evidencia fotográfica, generar estadísticas en tiempo real y visualizar gráficas dinámicas para apoyar la toma de decisiones.
-🎯 Objetivo del Proyecto
-Desarrollar una solución web moderna e interactiva que permita automatizar la gestión básica de un cine mediante herramientas tecnológicas, garantizando control, organización y seguimiento de las actividades de taquilla.
+📌 Descripción del Proyecto
+CineCali Premium Experience es una aplicación web desarrollada como parte del proyecto académico de Desarrollo Web. Su propósito es facilitar el control y administración de las operaciones básicas de un cine mediante una plataforma interactiva, moderna y fácil de utilizar.
 
-✨ Funcionalidades Principales
-🔐 Sistema de Autenticación
-Inicio de sesión seguro.
-Validación de credenciales.
-Control de acceso al sistema.
-Usuario: Cinecali
-Contraseña: Estrenos
-🍿 Gestión de Funciones
-El sistema permite registrar:
+La aplicación permite gestionar el acceso al sistema, registrar funciones cinematográficas, calcular la recaudación obtenida por la venta de boletas, controlar cambios de asientos con recargos especiales, visualizar estadísticas mediante gráficas dinámicas y capturar evidencia fotográfica del operador.
 
-✅ Nombre de la película
+La plataforma fue desarrollada utilizando tecnologías web modernas para ofrecer una experiencia intuitiva y profesional.
 
-✅ Sala asignada
+🎯 Objetivo
+Desarrollar una solución web que permita organizar, controlar y automatizar el proceso de gestión de taquilla de un cine, optimizando el registro de funciones, el cálculo de ingresos y el seguimiento de la información mediante herramientas digitales.
 
-✅ Cantidad de boletas vendidas
+⚙️ Características Principales
+🎬 Gestión de funciones: registro de películas, salas y ventas realizadas.
+🔐 Inicio de sesión seguro: control de acceso mediante autenticación de usuarios.
+💰 Cálculo de recaudación: cálculo automático de ingresos por venta de boletas.
+🔑 Validación de seguridad: confirmación mediante clave de acceso "CINE".
+🪑 Cambio de asientos: aplicación automática de recargos según el horario establecido.
+📊 Dashboard estadístico: seguimiento de ingresos, boletas vendidas y funciones registradas.
+📈 Gráficas dinámicas: representación visual de las recaudaciones generadas.
+📸 Captura fotográfica: registro visual del operador mediante la cámara del dispositivo.
+🕒 Fecha y hora en tiempo real: actualización automática del reloj del sistema.
+🎞️ Funcionalidades del Sistema
+🔐 Inicio de Sesión
+El sistema valida las siguientes credenciales:
 
-✅ Precio por boleta
+Usuario
 
+Cinecali
+Contraseña
+
+Estrenos
+Una vez autenticado, el usuario podrá acceder al panel principal del sistema.
+
+🍿 Registro de Funciones
+Permite registrar:
+
+Nombre de la película.
+Sala asignada.
+Cantidad de boletas vendidas.
+Precio por boleta.
 💰 Cálculo de Recaudación
-Realiza automáticamente:
+La recaudación total se obtiene mediante la fórmula:
 
-Recaudación = Cantidad de Boletas × Precio
-Incluye una simulación de procesamiento antes de mostrar el resultado.
+Recaudación = Cantidad de Boletas × Precio por Boleta
+Antes de mostrar el resultado, el sistema presenta un efecto de carga para simular el procesamiento de la información.
 
-⏳ Efecto de Reloj
-Antes de mostrar la recaudación:
-
-Calculando...
-3
-2
-1
-Posteriormente se presenta el valor total obtenido.
-
-🔑 Clave de Seguridad
-El sistema solicita la palabra clave:
+🔑 Validación de Seguridad
+Después del cálculo se solicita la siguiente clave:
 
 CINE
-Si es correcta:
+Si la clave es correcta:
 
-✅ Guarda la información.
+✅ Guarda el registro.
+
+✅ Actualiza las estadísticas.
 
 ✅ Limpia el formulario.
 
-✅ Permite continuar registrando funciones.
+Si la clave es incorrecta:
 
-Si es incorrecta:
+❌ Regresa automáticamente al inicio de sesión.
 
-❌ Retorna al inicio de sesión.
+🪑 Cambio de Asientos
+El sistema permite gestionar cambios de ubicación para los espectadores.
 
-🪑 Cambio de Asiento
-Permite gestionar cambios de ubicación para los espectadores.
-
-Regla del negocio:
-
-Entre las:
+Regla de negocio
+Entre:
 
 3:00 PM y 6:00 PM
-se aplica automáticamente:
+se aplica automáticamente un:
 
 5% de recargo
 sobre el valor base de la boleta.
+
 📊 Dashboard Inteligente
-Visualización en tiempo real de:
+El sistema muestra en tiempo real:
 
-💰 Ingresos acumulados
-
-🎟 Boletas vendidas
-
-🎬 Funciones registradas
-
-📈 Estadísticas generales
-
+💰 Ingresos acumulados.
+🎟️ Total de boletas vendidas.
+🎬 Número de funciones registradas.
 📈 Gráficas Dinámicas
-Implementación mediante:
+Implementadas mediante Chart.js para visualizar:
 
-Chart.js
-Permite visualizar:
-
-Evolución de recaudos.
-Comportamiento de las ventas.
-Tendencias estadísticas.
+Recaudaciones por función.
+Comportamiento de ventas.
+Evolución de ingresos.
 📸 Captura Fotográfica
-Integración con la cámara del dispositivo.
+Permite:
 
-Funciones:
-
-✅ Activar cámara
-
-✅ Tomar fotografía
-
-✅ Mostrar evidencia visual
-
-✅ Registro del operador
-
-🕒 Fecha y Hora en Tiempo Real
-Actualización automática de:
-
-Fecha actual
-Hora del sistema
-Información en vivo
-🛠 Tecnologías Utilizadas
-Frontend
-HTML5
-CSS3
-JavaScript
-Librerías
-Chart.js
-Control de Versiones
-Git
-GitHub
-Despliegue
-GitHub Pages
+Activar la cámara.
+Capturar fotografías.
+Visualizar la evidencia tomada.
+Registrar visualmente al operador.
+🛠️ Tecnologías Utilizadas
+Tecnología	Descripción
+HTML5	Estructura de la aplicación web.
+CSS3	Diseño visual y estilos.
+JavaScript	Lógica, interacción y validaciones.
+Chart.js	Generación de gráficas dinámicas.
+GitHub Pages	Publicación y despliegue del proyecto.
+GitHub	Control de versiones y repositorio.
 📂 Estructura del Proyecto
 CasoaCine
-
-│── index.html
-│── README.md
-
+│
+├── index.html
+├── README.md
+│
 ├── css
 │   └── style.css
-
+│
 ├── js
 │   ├── auth.js
 │   ├── registro.js
 │   ├── grafica.js
 │   └── foto.js
-🚀 Características Destacadas
-✅ Interfaz moderna
+│
+└── img
+🚀 Acceso al Proyecto
+Para ejecutar el proyecto localmente:
 
-✅ Diseño inspirado en plataformas de entretenimiento
+Descargar o clonar el repositorio.
+Abrir la carpeta del proyecto.
+Ejecutar el archivo:
+index.html
+Ingresar las credenciales correspondientes.
+Utilizar las funcionalidades disponibles en el sistema.
+🌎 Alcance del Proyecto
+El proyecto está enfocado en la simulación de la administración básica de un cine, incorporando herramientas de control, monitoreo y análisis que permiten optimizar la gestión de funciones y ventas de taquilla.
 
-✅ Gestión automatizada de taquilla
-
-✅ Dashboard de indicadores
-
-✅ Validaciones de seguridad
-
-✅ Gráficas dinámicas
-
-✅ Captura fotográfica integrada
-
-✅ Experiencia amigable para el usuario
+🎓 Contexto Académico
+Este desarrollo corresponde al Caso de Estudio: Sistema de Cine Básico con Gráficas y Cambio de Asientos, realizado dentro de las actividades académicas de la asignatura de Desarrollo Web.
 
 👩‍💻 Autora
 Helen Yessenia Jaramillo Caicedo
 
-
-                                                                            🎬 CineCali Premium Experience © 2026
-
-
+Proyecto Académico de Desarrollo Web
+🎬 CineCali Premium ExperienceSistema Inteligente de Gestión Cinematográfica
