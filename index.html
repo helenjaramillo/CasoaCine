@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>CineCali Premium</title>
+<title>CineCali Premium</title>
 
-    <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css">
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
-
 <body>
 
 <header class="hero">
-    <h1>🎬 CineCali Premium</h1>
-    <p>Gestión Inteligente de Taquilla</p>
+    <div class="overlay">
+        <h1>🎬 CineCali Premium</h1>
+        <p>Gestión Inteligente de Taquilla</p>
+    </div>
 </header>
 
 <div id="login" class="card">
@@ -39,7 +40,7 @@
 
 </div>
 
-<div id="panel" class="card" style="display:none">
+<div id="panel" class="card" style="display:none;">
 
     <h2>🍿 Registro de Venta</h2>
 
@@ -61,8 +62,9 @@
 
     <h3 id="resultado"></h3>
 
-    <table>
+    <h2>📋 Historial de Ventas</h2>
 
+    <table>
         <thead>
             <tr>
                 <th>Película</th>
@@ -72,11 +74,10 @@
             </tr>
         </thead>
 
-        <tbody id="contenidoTabla">
-
-        </tbody>
-
+        <tbody id="contenidoTabla"></tbody>
     </table>
+
+    <h2>📈 Recaudación</h2>
 
     <canvas id="grafica"></canvas>
 
