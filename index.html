@@ -1,57 +1,88 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sistema de Cine</title>
- 
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CineCali - Sistema de Gestión</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
- 
+
 <body>
- 
-<h1>Sistema de Gestión de Cine</h1>
- 
-<div id="login">
- 
-<h2>Inicio de Sesión</h2>
- 
-<input type="text" id="usuario" placeholder="Usuario">
-<br><br>
- 
-<input type="password" id="clave" placeholder="Contraseña">
-<br><br>
- 
-<button onclick="ingresar()">Ingresar</button>
- 
-</div>
- 
-<div id="panel" style="display:none;">
- 
-<h2>Registro de Venta</h2>
- 
-<input type="text" id="pelicula" placeholder="Película">
-<br><br>
- 
-<input type="text" id="sala" placeholder="Sala">
-<br><br>
- 
-<input type="number" id="boletas" placeholder="Cantidad de boletas">
-<br><br>
- 
-<input type="number" id="precio" placeholder="Precio por boleta">
-<br><br>
- 
-<button onclick="calcular()">
-Calcular Recaudación
-</button>
- 
-<h3 id="resultado"></h3>
- 
-</div>
- 
-<script src="js/auth.js"></script>
-<script src="js/calculo.js"></script>
- 
+
+    <header>
+        <h1>🎬 CineCali</h1>
+        <p>Sistema de Gestión de Taquilla</p>
+    </header>
+
+    <section id="login">
+        <h2>Iniciar Sesión</h2>
+
+        <input type="text" id="usuario" placeholder="Usuario">
+        <input type="password" id="clave" placeholder="Contraseña">
+
+        <button onclick="ingresar()">Ingresar</button>
+    </section>
+
+    <section id="panel" style="display:none;">
+
+        <h2>Registro de Venta</h2>
+
+        <input type="text" id="pelicula" placeholder="Película">
+
+        <input type="text" id="sala" placeholder="Sala">
+
+        <input type="number" id="boletas" placeholder="Cantidad de boletas">
+
+        <input type="number" id="precio" placeholder="Precio por boleta">
+
+        <button onclick="registrarVenta()">
+            Registrar Venta
+        </button>
+
+        <button onclick="cambiarAsiento()">
+            Cambio de Asiento
+        </button>
+
+        <h3 id="resultado"></h3>
+
+        <hr>
+
+        <h2>Historial de Ventas</h2>
+
+        <table id="tabla">
+            <thead>
+                <tr>
+                    <th>Película</th>
+                    <th>Sala</th>
+                    <th>Boletas</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+
+            <tbody id="contenidoTabla">
+
+            </tbody>
+
+        </table>
+
+        <hr>
+
+        <h2>Gráfica de Recaudación</h2>
+
+        <canvas id="grafica"></canvas>
+
+    </section>
+
+    <script src="js/auth.js"></script>
+    <script src="js/registro.js"></script>
+    <script src="js/grafica.js"></script>
+
 </body>
+
 </html>
