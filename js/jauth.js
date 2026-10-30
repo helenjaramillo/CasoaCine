@@ -1,15 +1,22 @@
-function ingresar() {
+function ingresar(){
 
-    let usuario = document.getElementById("usuario").value;
-    let clave = document.getElementById("clave").value;
+    let usuario =
+    document.getElementById("usuario").value;
 
-    if (usuario === "Cinecali" && clave === "Estrenos") {
+    let clave =
+    document.getElementById("clave").value;
 
-        document.getElementById("login").style.display = "none";
-        document.getElementById("panel").style.display = "block";
+    if(usuario === "Cinecali" &&
+       clave === "Estrenos"){
 
-    } else {
+        document.getElementById("login").style.display="none";
+
+        document.getElementById("panel").style.display="block";
+
+    }else{
 
         alert("Usuario o contraseña incorrectos");
+
     }
+
 }
