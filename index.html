@@ -1,38 +1,135 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CineCali Premium</title>
 
-    css/style.css
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CineCali Premium</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 
 <body>
 
-<h1>CineCali Premium</h1>
+<header>
+    <h1>🎬 CineCali Premium</h1>
+    <p>Sistema Inteligente de Gestión de Cine</p>
 
-<div id="login">
+    <div id="reloj"></div>
+</header>
 
-    <h2>Iniciar Sesión</h2>
+<div id="login" class="contenedor">
 
-    <input type="text" id="usuario" placeholder="Usuario">
-    <br><br>
+    <h2>🔐 Iniciar Sesión</h2>
 
-    <input type="password" id="clave" placeholder="Contraseña">
-    <br><br>
+    <input type="text"
+           id="usuario"
+           placeholder="Usuario">
 
-    <button onclick="ingresar()">Ingresar</button>
+    <input type="password"
+           id="clave"
+           placeholder="Contraseña">
+
+    <button onclick="ingresar()">
+        Ingresar
+    </button>
 
 </div>
 
-<div id="panel" style="display:none">
+<div id="panel" class="contenedor" style="display:none;">
 
-    <h2>Bienvenido al sistema</h2>
+    <h2>🍿 Registro de Función</h2>
 
-</div>
+    <input type="text"
+           id="pelicula"
+           placeholder="Película">
 
-js/auth.jsscript>
+    <input type="text"
+           id="sala"
+           placeholder="Sala">
 
-</body>
-</html>
+    <input type="number"
+           id="boletas"
+           placeholder="Cantidad de boletas">
+
+    <input type="number"
+           id="precio"
+           value="12000">
+
+    <button onclick="registrarVenta()">
+        Calcular Recaudación
+    </button>
+
+    <button onclick="cambiarAsiento()">
+        Cambio de Asiento
+    </button>
+
+    <h3 id="resultado"></h3>
+
+    <hr>
+
+    <h2>📊 Dashboard</h2>
+
+    <div class="dashboard">
+
+        <div class="card">
+            <h3>💰 Ingresos</h3>
+            <p id="ingresos">$0</p>
+        </div>
+
+        <div class="card">
+            <h3>🎟 Boletas</h3>
+            <p id="totalBoletas">0</p>
+        </div>
+
+        <div class="card">
+            <h3>🎬 Funciones</h3>
+            <p id="funciones">0</p>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <h2>📋 Historial</h2>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>Película</th>
+                <th>Sala</th>
+                <th>Boletas</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+
+        <tbody id="tablaVentas"></tbody>
+
+    </table>
+
+    <hr>
+
+    <h2>📈 Recaudación</h2>
+
+    <canvas id="grafica"></canvas>
+
+    <hr>
+
+    <h2>📸 Captura del Operador</h2>
+
+    <video id="video"
+           width="320"
+           height="240"
+           autoplay>
+    </video>
+
+    <br><br>
+
+    <button onclick="activarCamara()">
+        Activar Cámara
+    </
