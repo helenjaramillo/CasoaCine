@@ -1,11 +1,17 @@
 function ingresar() {
 
-    let usuario = document.getElementById("usuario").value;
-    let clave = document.getElementById("clave").value;
+    let usuario =
+        document.getElementById("usuario").value;
 
-    if(usuario === "Cinecali" && clave === "Estrenos") {
+    let clave =
+        document.getElementById("clave").value;
 
-        alert("Bienvenido al Sistema de Cine");
+    if (usuario === "Cinecali" &&
+        clave === "Estrenos") {
+
+        document.getElementById("login").style.display = "none";
+
+        document.getElementById("panel").style.display = "block";
 
     } else {
 
@@ -13,3 +19,4 @@ function ingresar() {
 
     }
 }
+
