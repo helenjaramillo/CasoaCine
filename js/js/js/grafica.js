@@ -11,28 +11,19 @@ function actualizarGrafica(){
 
     chart = new Chart(ctx, {
 
-        type: "line",
+        type:"line",
 
         data:{
-
             labels: ventas.map(
-                (v,i)=>"Venta "+(i+1)
+                (v,i) => `Venta ${i+1}`
             ),
 
             datasets:[{
-
                 label:"Recaudación",
-
-                data: ventas,
-
+                data:ventas,
                 borderColor:"red",
-
-                borderWidth:3,
-
-                fill:false
-
+                borderWidth:3
             }]
-
         }
 
     });
