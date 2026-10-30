@@ -12,12 +12,8 @@ Desarrollar una solución web moderna e interactiva que permita automatizar la g
 Inicio de sesión seguro.
 Validación de credenciales.
 Control de acceso al sistema.
-Usuario:
-
-Cinecali
-Contraseña:
-
-Estrenos
+Usuario: Cinecali
+Contraseña: Estrenos
 🍿 Gestión de Funciones
 El sistema permite registrar:
 
