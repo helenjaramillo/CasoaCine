@@ -1,8 +1,8 @@
 let ventas = [];
 
 let ingresos = 0;
-let totalBoletas = 0;
-let totalFunciones = 0;
+let boletasTotales = 0;
+let funciones = 0;
 
 function registrarVenta(){
 
@@ -13,53 +13,56 @@ function registrarVenta(){
     document.getElementById("sala").value;
 
     let boletas =
-    Number(document.getElementById("boletas").value);
+    Number(
+        document.getElementById("boletas").value
+    );
 
     let precio =
-    Number(document.getElementById("precio").value);
+    Number(
+        document.getElementById("precio").value
+    );
 
     let total = boletas * precio;
 
     document.getElementById("resultado")
-    .innerHTML="⏳ Calculando...";
+    .innerHTML = "⏳ Calculando...";
 
     setTimeout(()=>{
 
         document.getElementById("resultado")
-        .innerHTML=
-        "💰 Recaudación Total: $" + total;
+        .innerHTML =
+        "✅ Recaudación Total: $" + total;
 
         let clave =
         prompt(
         "Ingrese la clave CINE"
         );
 
-        if(clave==="CINE"){
+        if(clave === "CINE"){
 
             ventas.push(total);
 
             ingresos += total;
-            totalBoletas += boletas;
-            totalFunciones++;
+            boletasTotales += boletas;
+            funciones++;
 
             document.getElementById("ingresos")
-            .innerHTML="$"+ingresos;
+            .innerHTML = "$" + ingresos;
 
             document.getElementById("totalBoletas")
-            .innerHTML=totalBoletas;
+            .innerHTML = boletasTotales;
 
             document.getElementById("funciones")
-            .innerHTML=totalFunciones;
+            .innerHTML = funciones;
 
             document.getElementById("tablaVentas")
-            .innerHTML +=
-            `
-            <tr>
-             <td>${pelicula}</td>
-             <td>${sala}</td>
-             <td>${boletas}</td>
-             <td>$${total}</td>
-            </tr>
+            .innerHTML += `
+                <tr>
+                    <td>${pelicula}</td>
+                    <td>${sala}</td>
+                    <td>${boletas}</td>
+                    <td>$${total}</td>
+                </tr>
             `;
 
             actualizarGrafica();
@@ -73,55 +76,33 @@ function registrarVenta(){
 
             alert("Clave incorrecta");
 
-            document.getElementById("panel")
-            .style.display="none";
-
-            document.getElementById("login")
-            .style.display="block";
+            document.getElementById("panel").style.display="none";
+            document.getElementById("login").style.display="block";
 
         }
 
     },3000);
-
 }
 
 function cambiarAsiento(){
 
-    let hora =
-    new Date().getHours();
+    let hora = new Date().getHours();
 
     let base = 12000;
 
-    if(
-        hora >= 15 &&
-        hora <= 18
-    ){
+    if(hora >= 15 && hora <= 18){
 
-        let nuevo =
-        base * 1.05;
+        let recargo = base * 1.05;
 
         alert(
-        "Recargo del 5%\n" +
-        "Valor final: $" + nuevo
+        "Recargo del 5%\nValor final: $" +
+        recargo
         );
 
     }else{
 
-        alert(
-        "Cambio realizado sin recargo"
-        );
+        alert("Cambio realizado sin recargo");
 
     }
 
 }
-
-setInterval(()=>{
-
-    let fecha =
-    new Date();
-
-    document.getElementById("reloj")
-    .innerHTML=
-    fecha.toLocaleString();
-
-},1000);
